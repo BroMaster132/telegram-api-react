@@ -6,7 +6,7 @@ import { classNames } from 'primereact/utils';
 
         
 
-export const SpeedDialButton = () => {
+export const SpeedDialButton = ({products}) => {
   const [visible, setVisible] = useState(false);
 
   const actionItems = [

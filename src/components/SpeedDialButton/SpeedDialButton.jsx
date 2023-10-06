@@ -1,6 +1,7 @@
 import './SpeedDialButton.css'
 import React, { useState, useCallback, useEffect } from 'react'
 import { SpeedDial } from 'primereact/speeddial';
+import { classNames } from 'primereact/utils';
 
 
         
@@ -16,9 +17,11 @@ export const SpeedDialButton = () => {
 
   return (
     <div>
-        <SpeedDial model={actionItems} direction='down' style={{ left: 'calc(50% - 2rem)', top: 0 }} visible={visible} onShow={() => setVisible(true)} onHide={() => setVisible(false)} />
+        <SpeedDial model={actionItems}  visible={visible} onShow={() => setVisible(true)} onHide={() => setVisible(false)} className={'speedButton'} />
 
 
     </div>
   )
 }
+
+// direction='down' style={{ left: 'calc(50% - 2rem)', top: 0 }}

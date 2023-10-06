@@ -1,7 +1,6 @@
 import './SpeedDialButton.css'
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState} from 'react'
 import { SpeedDial } from 'primereact/speeddial';
-import { classNames } from 'primereact/utils';
 
 
         
@@ -10,10 +9,27 @@ export const SpeedDialButton = ({products}) => {
   const [visible, setVisible] = useState(false);
 
   const actionItems = [
-    { icon: 'pi pi-shopping-cart', command: () => { } },
-    { icon: 'pi pi-cart-plus', command: () => { } },
-    { icon: 'pi pi-trash', command: () => { } }
+    { icon: 'pi pi-shopping-cart', command: () => { updateHelicopter() } },
+    { icon: 'pi pi-cart-plus', command: () => { addHelicopter() } },
+    { icon: 'pi pi-trash', command: () => { removeHelicopter() } }
   ];
+
+  const addHelicopter = (data) => {
+    products.push(data)
+  }
+
+  const removeHelicopter = (id) => {
+    products = products.filter(item => item.id !== id)
+  }
+
+  const updateHelicopter = (id, data) => {
+    products = products.map(item => {
+      if (item.id === id) {
+        return data
+      }
+      return item
+    })
+  }
 
   return (
     <div>

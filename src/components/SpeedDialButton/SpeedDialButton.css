@@ -11,13 +11,13 @@
 }
 .modal {
     text-align: center;
-    width: 700px !important;
+    width: 300px !important;
     height: 700px;
 }
 
 .inputNumber {
     text-align: center;
-    width: 655px ;
+    width: 100% ;
     height: 40px;
 
 }

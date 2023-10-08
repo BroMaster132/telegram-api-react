@@ -58,7 +58,7 @@ export const SpeedDialButton = ({products}) => {
   return (
     <div>
         <SpeedDial model={actionItems}  visible={visible} onShow={() => setVisible(true)} onHide={() => setVisible(false)} className={'speedButton'} />
-        <Dialog className='modal' header="Create" visible={display} style={{ width: '50vw' }} onHide={() => setDisplay(false)} footer={footerContent}>
+        <Dialog className='modal' header="Create helicopter" visible={display} style={{ width: '50vw' }} onHide={() => setDisplay(false)} footer={footerContent}>
           <div className='modal-content'>
             <div>
               <span>Name</span><br />

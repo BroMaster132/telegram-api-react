@@ -4,3 +4,20 @@
     right: 20px;
     z-index: 1000;
 }
+
+.modal-content {
+    margin: 20px;
+    text-align: left;
+}
+.modal {
+    text-align: center;
+    width: 700px !important;
+    height: 700px;
+}
+
+.inputNumber {
+    text-align: center;
+    width: 655px ;
+    height: 40px;
+
+}

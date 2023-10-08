@@ -18,9 +18,10 @@ export const SpeedDialButton = ({products}) => {
 
   const actionItems = [
     { icon: 'pi pi-shopping-cart', command: () => { setDisplay(true) } },
-    { icon: 'pi pi-cart-plus', command: () => { setDisplay(true) } },
-    { icon: 'pi pi-trash', command: () => { setDisplay(true) } }
+    { icon: 'pi pi-cart-plus', command: () => { addHelicopter() } },
+    { icon: 'pi pi-trash', command: () => { removeHelicopter() } }
   ];
+
 
   const addHelicopter = (data) => {
     products.push(data)

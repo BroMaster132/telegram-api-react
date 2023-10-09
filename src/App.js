@@ -6,7 +6,10 @@ import { ProductList } from './components/ProductList/ProductList';
 import { Form } from './components/Form/Form';
 // import { useTelegram } from './hooks/useTelegram';
 import { SpeedDialButton } from './components/SpeedDialButton/SpeedDialButton';
-
+import { Practice } from './components/Practice/Practice';
+import { First} from './components/First/First';
+import { Second } from './components/Second/Second';
+import { Third } from './components/Third/Third';
 const products = [
   {id: '1', title: "Helicopter#1", price: 350000000, description: "Летает, не бит не крашен", image: "/src/assets/helicopter.webp"},
   {id: '2', title: "Helicopter#2", price: 450000000, description: "Летала девушка, один хозяин", image: "/src/assets/helicopter.webp"},
@@ -34,8 +37,13 @@ function App() {
       <Routes>
         <Route index element={<ProductList products={products} />}></Route>
         <Route path={'form'} element={<Form />}></Route>
+        <Route path={'/first'} element={<First/>}></Route>
+        <Route path={'/second/fuckingReact'} element={<Second/>}></Route>
+        <Route path={"/third"} element={<Third/>}></Route>
       </Routes>
       <SpeedDialButton products={products} />
+      <Practice />
+      
     </div>
   );
 }

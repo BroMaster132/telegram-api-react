@@ -43,8 +43,10 @@ export const SpeedDialButton = ({products}) => {
     const files = e.target.files;
     const reader = new FileReader();
     reader.readAsText(files[0]);
+    console.log(files);
     reader.onload = (e) => {
       const data = JSON.parse(e.target.result)
+      
       updateHelicopter(data.id, data)
     }
   }
@@ -74,7 +76,7 @@ export const SpeedDialButton = ({products}) => {
             </div>
             <div>
               <span>Image</span><br />
-              <FileUpload mode="basic" name="demo[]" url="/api/upload" accept="image/*" chooseLabel='Upload' maxFileSize={1000000} onUpload={onUpload} />
+              <FileUpload mode="basic" name="demo[]" url="/" accept="image/*" chooseLabel='Upload' maxFileSize={1000000} onUpload={onUpload} />
             </div>
 
 

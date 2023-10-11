@@ -14,16 +14,14 @@ export const SpeedDialButton = ({products}) => {
   const [visibleEdit, setVisibleEdit] = useState(false);
 
   const actionItems = [
-    { icon: 'pi pi-shopping-cart', command: () => { setVisibleEdit(true) } },
+    { icon: 'pi pi-pencil', command: () => { setVisibleEdit(true) } },
     { icon: 'pi pi-cart-plus', command: () => { setVisibleAdd(true) } },
     { icon: 'pi pi-trash', command: () => { setVisibleDelete(true) } }
   ];
 
 
-  const addHelicopter = (data) => {
-    products.push(data)
-  }
-
+  
+  console.log(products);
   const removeHelicopter = (id) => {
     products = products.filter(item => item.id !== id)
   }
@@ -46,7 +44,7 @@ export const SpeedDialButton = ({products}) => {
         <SpeedDial model={actionItems}  visible={visible} onShow={() => setVisible(true)} onHide={() => setVisible(false)} className={'speedButton'} />
 
         <ModalDelete visible={visibleDelete} setVisible={setVisibleDelete} product={products} onChange={deleteHelicopter} />
-        <ModalAdd visible={visibleAdd} setVisible={setVisibleAdd} product={products} onChange={addHelicopter} />
+        <ModalAdd visible={visibleAdd} setVisible={setVisibleAdd} product={products}  />
         <ModalEdit visible={visibleEdit} setVisible={setVisibleEdit} product={products} onChange={updateHelicopter} />
     </div>
   )

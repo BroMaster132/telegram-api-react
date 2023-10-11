@@ -9,11 +9,22 @@ export const ModalAdd = ({ product, onChange, visible, setVisible }) => {
   const [name, setName] = useState(null)
   const [description, setDescription] = useState(null)
   const [price, setPrice] = useState(null)
+  
+  const addHelicopter = () => {
+    product.push({
+      id: product.length + 1,
+      title: name,
+      price: price,
+      description: description,
+
+    })
+    setVisible(false)
+  }
 
   const footerContent = (
     <div className="p-dialog-footer">
       <Button style={{marginRight: '20px', fontSize: '15pt', marginBottom: '20px'}} label="Close" icon="pi pi-times" onClick={() => setVisible(false)} />
-      <Button style={{fontSize: '15pt', marginBottom: '20px', marginRight: '20px',}} label="Save" icon="pi pi-check" onClick={() => setVisible(false)} />
+      <Button style={{fontSize: '15pt', marginBottom: '20px', marginRight: '20px',}} label="Save" icon="pi pi-check" onClick={() => addHelicopter()} />
     </div>
   )
   

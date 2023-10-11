@@ -43,7 +43,6 @@ function App() {
         <Route path={"/third"} element={<Third/>}></Route> */}
       </Routes>
       <SpeedDialButton products={products} />
-      <ModalDelete products={products} />
       {/* <Practice /> */}
       
     </div>
